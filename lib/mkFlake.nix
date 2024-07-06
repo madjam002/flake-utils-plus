@@ -188,7 +188,7 @@ let
         inherit inputs;
         pkgs = selectedNixpkgs;
       }) // (optionalAttrs (host.output == "nixosConfigurations") {
-        inherit lib baseModules;
+        inherit baseModules;
         specialArgs = nixosSpecialArgs // specialArgs;
       }));
     }
